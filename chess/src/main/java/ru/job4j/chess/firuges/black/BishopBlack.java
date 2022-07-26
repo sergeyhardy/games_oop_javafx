@@ -22,7 +22,7 @@ public class BishopBlack implements Figure {
     public Cell[] way(Cell dest) {
         if (!isDiagonal(position, dest)) {
             throw new ImpossibleMoveException(
-                    String.format("Could not move by diagonal from %s to %s", position, dest)
+                    String.format("Could not move by diagonal from %s to %s ", position, dest)
             );
         }
         int size = abs(dest.getX() - position().getX());
