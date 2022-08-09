@@ -24,7 +24,7 @@ public final class Logic {
         for (Figure figure : figures) {
             for (Cell cell:steps) {
                 if (figure.position().equals(cell)) {
-                   throw new OccupiedCellException();
+                   throw new OccupiedCellException(String.format("Cell Is Occupied"));
                 }
             }
 
@@ -44,6 +44,6 @@ public final class Logic {
                 return index;
             }
         }
-        throw new FigureNotFoundException();
+        throw new FigureNotFoundException(String.format("Figure not found"));
     }
 }
